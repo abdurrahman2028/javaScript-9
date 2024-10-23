@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background-color: cornflowerblue;
+        border: 3px dashed black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    #btn{
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        font-weight: normal;
+        border: none;
+        background-color: lavender;
+        cursor: pointer;
+    }
+    .marks{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    #plus, #minus, #multiply, #divide{
+        background: none;
+        border: none;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input{
+        width: 300px;
+        height: 30px;
+        font-size: 15px;
+        text-align: center;
+        border: none;
+    }
+    .pera{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #pera{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        background-color: black;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="input-group">
+            <input id="one" type="number" placeholder="Input One"> 
+            <div class="marks">                
+                <button id="plus">+</button>
+                <button id="minus">-</button>
+                <button id="multiply">*</button>
+                <button id="divide">/</button>
+            </div>
+            <input id="two" type="number" placeholder="Input Two">
+        </div>
+        <br><br><br>
+        <div class="pera">
+            <p id="pera">0</p>
+        </div>   
+    </div>
+    <script>
+        function resetButtonStyles() {
+            document.getElementById("plus").style.backgroundColor = "";
+            document.getElementById("minus").style.backgroundColor = "";
+            document.getElementById("multiply").style.backgroundColor = "";
+            document.getElementById("divide").style.backgroundColor = "";
+        }
+
+        document.getElementById("plus").addEventListener("click", function(){ 
+            resetButtonStyles();
+            plus.style.backgroundColor = "white";
+            document.getElementById("html").addEventListener("mouseover", function(){
+            let one = document.getElementById('one').value
+            let two = document.getElementById('two').value
+            let pera = document.getElementById('pera')
+            pera.innerHTML = Number(one) + Number(two)
+            })
+        })
+        document.getElementById("minus").addEventListener("click", function(){ 
+            resetButtonStyles(); 
+            minus.style.backgroundColor = "white";
+            document.getElementById("html").addEventListener("mouseover", function(){
+            let one = document.getElementById('one').value
+            let two = document.getElementById('two').value
+            let pera = document.getElementById('pera')
+            pera.innerHTML = Number(one) - Number(two)
+            })
+        })
+        document.getElementById("multiply").addEventListener("click", function(){ 
+            resetButtonStyles(); 
+            multiply.style.backgroundColor = "white";
+            document.getElementById("html").addEventListener("mouseover", function(){
+            let one = document.getElementById('one').value
+            let two = document.getElementById('two').value
+            let pera = document.getElementById('pera')
+            pera.innerHTML = Number(one) * Number(two)
+            })
+        })
+        document.getElementById("divide").addEventListener("click", function(){ 
+            resetButtonStyles(); 
+            divide.style.backgroundColor = "white";
+            document.getElementById("html").addEventListener("mouseover", function(){
+            let one = document.getElementById('one').value
+            let two = document.getElementById('two').value
+            let pera = document.getElementById('pera')
+            pera.innerHTML = Number(one) / Number(two)
+            })
+        })
+    </script>
+</body>
+</html>
